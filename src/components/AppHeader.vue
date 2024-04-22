@@ -1,7 +1,11 @@
 <script>
+import HeaderJumbo from './HeaderJumbo.vue';
 import { store } from '../store';
 
 export default {
+    components: {
+        HeaderJumbo
+    },
     data() {
         return {
             store,
@@ -19,6 +23,7 @@ export default {
             <div class="menu">
                 <ul class="flex">
                     <li v-for="link in store.headerLinks" :key="link.id" :class="link.type">
+                        <img v-if="link.svg" :src="link.svg" alt="" class="svg">
                         <a v-if="link.name" :href="link.href">{{ link.name.toUpperCase() }}</a>
                         <img v-else :src="link.img" alt="">
                     </li>
@@ -26,21 +31,18 @@ export default {
             </div>
             <ul class="action flex">
                 <li v-for="action in store.headerActions" :class="action.type" class="flex">
-                    <img :src="action.svg" alt="">
+                    <img :src="action.svg" alt="" class="svg">
                     <a :href="action.href">{{ action.name.toUpperCase() }}</a>
                 </li>
-
             </ul>
         </nav>
-        <div class="jumbo">
-
-        </div>
+        <HeaderJumbo />
     </header>
 </template>
 
 <style lang="scss" scoped>
 .app_header {
-    background-image: url(/public/img/cielostellato.PNG);
+    background-image: url(/img/cielostellato.PNG);
     color: white;
     font-size: 12px;
     padding: 16px 0;
@@ -63,9 +65,13 @@ export default {
     ul {
         gap: 24px;
         align-items: center;
+
+        &>li:first-child {
+            display: flex;
+        }
     }
 
-    img {
+    .logo img {
         width: 100px;
     }
 }
@@ -73,12 +79,12 @@ export default {
 .action {
     gap: 15px;
     align-items: center;
+}
 
-    img {
-        width: 18px;
-        aspect-ratio: 1;
-        filter: invert(100%);
-        padding-right: 4px;
-    }
+.svg {
+    filter: invert(100%);
+    padding-right: 4px;
+    width: 22px;
+
 }
 </style>
