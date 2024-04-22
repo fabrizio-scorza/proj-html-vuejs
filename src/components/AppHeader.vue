@@ -34,7 +34,7 @@ export default {
                     <img src="/svg/svg-1.svg" alt="" class="svg">
                     <a href="#">CART</a>
                     <img src="/svg/svg-5.svg" alt="" class="cart-baloon">
-                    <span class="cart-num">1</span>
+                    <span class="cart-num">0</span>
                 </li>
                 <li class="flex">
                     <img src="/svg/svg-12.svg" alt="" class="svg">
@@ -47,6 +47,8 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+@use '../style/partials/variables' as *;
+
 .app_header {
     background-image: url(/img/cielostellato.PNG);
     color: white;
@@ -62,7 +64,7 @@ export default {
 .btn {
     width: 95px;
     height: 30px;
-    background-color: #D2401E;
+    background-color: $orange;
     text-align: center;
     line-height: 30px;
 }
@@ -102,9 +104,9 @@ export default {
 .cart-num {
     position: absolute;
     z-index: 1;
-    color: #D2401E;
+    color: $orange;
     top: -6px;
-    left: -5px;
+    left: -6px;
 }
 
 .svg {

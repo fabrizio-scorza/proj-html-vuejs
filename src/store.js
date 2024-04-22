@@ -45,22 +45,26 @@ export const store = reactive({
             href: '#',
         }
     ],
-    headerActions: [
+    restaurants: [
         {
-            id: 0,
-            svg: '/svg/svg-1.svg',
-            type: 'link',
-            name: 'cart',
-            href: '#',
+            address: '1614 E. Bell Rd #104',
+            city: 'Salerno, AZ 85022',
+            number: '(602)867-1010',
         },
         {
-            id: 1,
-            svg: '/svg/svg-12.svg',
-            type: 'link',
-            name: 'search',
-            href: '#',
+            address: '204 E. Pizzetta Tommaso',
+            city: 'Sorrento, AZ 85022',
+            number: '(358)867-1010',
         },
+        {
+            address: 'Vale Puglia 54',
+            city: 'Torre Del Greco AZ 85022',
+            number: '(359)867-1010',
+        },
+        {
+            address: 'Corso Itali AA',
+            city: 'Naples, AZ 85022',
+            number: '(989)867-1010',
+        }
     ]
-
-
 })

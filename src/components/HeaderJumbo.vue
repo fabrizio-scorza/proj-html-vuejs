@@ -19,6 +19,8 @@ export default {
 </template>
 
 <style lang="scss">
+@use '../style/partials/variables' as *;
+
 .jumbo {
     padding: 30px 0;
     background-image: url(/img/h3-rev-img-5.png);
@@ -27,16 +29,15 @@ export default {
     background-size: 550px;
     justify-content: space-between;
     align-items: center;
+    overflow-x: hidden;
 
     img {
-        width: 220px;
         height: 280px;
     }
 }
 
 .prev,
 .next {
-    position: relative;
     filter: invert(100%);
     width: 60px;
     cursor: pointer;
@@ -46,7 +47,7 @@ export default {
         position: absolute;
         bottom: 135px;
         filter: invert(100%);
-        color: #d2401e;
+        color: $orange;
         font-size: 12px;
     }
 }

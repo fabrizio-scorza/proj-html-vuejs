@@ -2,3 +2,16 @@
     width: 800px;
     margin: 0 auto;
 }
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.col-4 {
+    width: calc(4*100%/12);
+}
+
+.col-6 {
+    width: calc(6*100%/12);
+}
