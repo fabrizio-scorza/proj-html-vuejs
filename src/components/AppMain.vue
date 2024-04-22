@@ -5,7 +5,7 @@ export default {
 </script>
 
 <template>
-
+    Main
 </template>
 
 <style lang="scss"></style>
