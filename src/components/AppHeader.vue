@@ -30,9 +30,15 @@ export default {
                 </ul>
             </div>
             <ul class="action flex">
-                <li v-for="action in store.headerActions" :class="action.type" class="flex">
-                    <img :src="action.svg" alt="" class="svg">
-                    <a :href="action.href">{{ action.name.toUpperCase() }}</a>
+                <li class="flex cart">
+                    <img src="/svg/svg-1.svg" alt="" class="svg">
+                    <a href="#">CART</a>
+                    <img src="/svg/svg-5.svg" alt="" class="cart-baloon">
+                    <span class="cart-num">1</span>
+                </li>
+                <li class="flex">
+                    <img src="/svg/svg-12.svg" alt="" class="svg">
+                    <a href="#">SEARCH</a>
                 </li>
             </ul>
         </nav>
@@ -79,6 +85,26 @@ export default {
 .action {
     gap: 15px;
     align-items: center;
+}
+
+.cart {
+    position: relative;
+}
+
+.cart-baloon {
+    position: absolute;
+    filter: invert(100%);
+    width: 12px;
+    left: -8px;
+    top: -2px;
+}
+
+.cart-num {
+    position: absolute;
+    z-index: 1;
+    color: #D2401E;
+    top: -6px;
+    left: -5px;
 }
 
 .svg {
