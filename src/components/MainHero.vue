@@ -87,7 +87,7 @@ export default {
     }
 
     p:first-of-type {
-        color: #303030;
+        color: $text-darkgray;
         font-size: 22px;
         padding-bottom: 8px;
     }

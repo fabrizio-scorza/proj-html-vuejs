@@ -1,16 +1,19 @@
 <script>
-import AppHero from './AppHero.vue';
+import MainHero from './MainHero.vue';
+import MainSpecialMenu from './MainSpecialMenu.vue';
 
 export default {
     components: {
-        AppHero,
+        MainHero,
+        MainSpecialMenu
     }
 
 }
 </script>
 
 <template>
-    <AppHero />
+    <MainHero />
+    <MainSpecialMenu />
 </template>
 
 <style lang="scss" scoped></style>
