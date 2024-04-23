@@ -16,11 +16,13 @@ export default {
 
 <template>
     <header class="app_header">
+        <!-- barra di navigazione con bottone per ordinare -->
         <nav class="navbar container flex">
             <div class="btn">
                 <a href="#">ORDER ONLINE</a>
             </div>
             <div class="menu">
+                <!-- lista di link popolata dallo store -->
                 <ul class="flex">
                     <li v-for="link in store.headerLinks" :key="link.id" :class="link.type">
                         <img v-if="link.svg" :src="link.svg" alt="" class="svg">
@@ -30,6 +32,7 @@ export default {
                 </ul>
             </div>
             <ul class="action flex">
+                <!-- carrello e tasto di ricerca -->
                 <li class="flex cart">
                     <img src="/svg/svg-1.svg" alt="" class="svg">
                     <a href="#">CART</a>

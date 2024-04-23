@@ -1,0 +1,35 @@
+// bottoni next e prev 
+@use './variables' as *;
+
+.prev,
+.next {
+    filter: invert(100%);
+    width: 60px;
+    cursor: pointer;
+
+
+    span {
+        position: absolute;
+        filter: invert(100%);
+        color: $orange;
+        font-size: 12px;
+    }
+}
+
+.prev {
+    transform: translateX(-50%);
+
+    span {
+        transform: rotate(90deg);
+        right: 8px;
+    }
+}
+
+.next {
+    transform: translateX(50%);
+
+    span {
+        transform: rotate(270deg);
+        left: 8px;
+    }
+}

@@ -1,4 +1,5 @@
+//link a tutti i file scss
 @use './partials/reset';
 @use './partials/layout';
-@use './partials/variables';
 @use './partials/utilities';
+@use './partials/components';

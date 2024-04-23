@@ -1,5 +1,6 @@
 import { reactive } from 'vue';
 
+//store che contiene i dati per popolare header e footer
 export const store = reactive({
     headerLinks: [
         {

@@ -11,13 +11,16 @@ export default {
 </script>
 
 <template>
+    <!-- footer diviso in due colonne -->
     <div class="row footer">
-        <div class="col-6 wrapper">
+        <div class="col-6 wrapper flex">
             <div class="row">
+                <!--prima colonna a sua volta divisa in tre colonne con le informazioni sui ristoranti e gli orari di apertura-->
                 <ul class="col-4">
                     <li>
                         <h3> FIND OUR RESTAURANTS</h3>
                     </li>
+                    <!-- lista degli idirizzi popolata dallo store -->
                     <li v-for=" restaurant in store.restaurants" class="address">
                         <span>{{ restaurant.address }}</span>
                         <span>{{ restaurant.city }}</span>
@@ -25,6 +28,7 @@ export default {
                     </li>
                 </ul>
                 <ul class="col-4 hours">
+                    <!-- lista con gli orari -->
                     <li>
                         <h3> WORKING HOURS</h3>
                     </li>
@@ -46,6 +50,7 @@ export default {
                     </li>
                     <li class="flex social">
                         <h4>FOLLOW US:</h4>
+                        <!-- link social -->
                         <ul class="flex social-icons">
                             <li>
                                 <a href="#">
@@ -71,47 +76,64 @@ export default {
                     </li>
                 </ul>
                 <div class="col-4">
+                    <!-- frase a effetto -->
                     <p class="quote"> THE DON PEPPE CREW FIRST AND FOREMOST VALUES AN AUTHENTIC, WELL BAKED SLICE OF
                         PIZZA. </p>
                 </div>
             </div>
             <div class="flex credits">
-                <p>Created with &hearts; by <span>Qode Interactive</span></p>
+                <!-- credits del creator e bollino qualità-->
+                <p>Created with &hearts; by <span>Sbriz Interactive</span></p>
                 <img src="/img/footer-bottom-img.png" alt="">
             </div>
         </div>
         <div class="col-6">
+            <!-- colonna con immagine -->
             <img id="footer-img" src="/img/footer-img-1.jpg" alt="">
         </div>
     </div>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @use '../style/partials/variables' as *;
 
+
+
 .footer {
+    max-height: 440px;
 
     h3 {
-        font-size: 12px;
+        font-size: 14px;
         color: $gold;
         padding-bottom: 15px;
     }
 
     h4 {
-        font-size: 8px;
+        font-size: 12px;
         color: $gold;
     }
 
     p,
     span {
         color: $text-gray;
-        font-size: 12px;
+        font-size: 14px;
     }
 
     .quote {
         color: white;
-        font-size: 14px;
+        font-size: 16px;
+        padding: 0 20px;
     }
+}
+
+.wrapper {
+    background-image: url(/img/cielostellato.PNG);
+    padding: 75px 30px 0;
+    flex-direction: column;
+}
+
+.row {
+    flex-grow: 1;
 }
 
 .address {
@@ -134,7 +156,6 @@ export default {
 
 }
 
-
 .social {
     align-items: center;
     gap: 10px;
@@ -151,20 +172,10 @@ export default {
     }
 }
 
-#footer-img {
-    display: block;
-    height: 100%;
-}
-
-.wrapper {
-    background-image: url(/img/cielostellato.PNG);
-    padding: 70px 15px 0;
-}
-
 .credits {
     justify-content: space-between;
     align-items: end;
-    padding-bottom: 15px;
+    padding-bottom: 20px;
 
     img {
         height: 75px;
@@ -178,5 +189,10 @@ export default {
     span {
         color: $text-green;
     }
+}
+
+#footer-img {
+    display: block;
+    height: 100%;
 }
 </style>

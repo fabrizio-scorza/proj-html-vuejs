@@ -5,6 +5,7 @@ export default {
 </script>
 
 <template>
+    <!-- jumbo sotto la barra di navigazione con immagine e bottoni per scorrere le immagini -->
     <div class="jumbo flex">
         <div class="prev">
             <img src="/svg/svg-5.svg" alt="">
@@ -18,55 +19,29 @@ export default {
     </div>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @use '../style/partials/variables' as *;
+@use '../style/partials/mixins' as *;
 
 .jumbo {
-    padding: 30px 0;
+    @include bg-with-next-prev;
     background-image: url(/img/h3-rev-img-5.png);
-    background-position: center;
-    background-repeat: no-repeat;
     background-size: 550px;
-    justify-content: space-between;
-    align-items: center;
-    overflow-x: hidden;
 
     img {
         height: 280px;
     }
-}
-
-.prev,
-.next {
-    filter: invert(100%);
-    width: 60px;
-    cursor: pointer;
-
 
     span {
-        position: absolute;
         bottom: 135px;
-        filter: invert(100%);
-        color: $orange;
-        font-size: 12px;
     }
-}
 
-.prev {
-    transform: translateX(-50%);
-
-    span {
-        transform: rotate(90deg);
-        right: 8px;
-    }
-}
-
-.next {
-    transform: translateX(50%);
-
-    span {
-        transform: rotate(270deg);
+    .next span {
         left: 8px;
+    }
+
+    .prev span {
+        right: 8px;
     }
 }
 </style>
