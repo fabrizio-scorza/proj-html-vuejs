@@ -39,7 +39,7 @@ export default {
 }
 
 .bg-img {
-    height: 560px;
+    height: 600px;
     background-image: url(/img/h1-img-4.jpg);
     background-position: center;
     justify-content: center;
@@ -52,7 +52,7 @@ export default {
 }
 
 .specials {
-    padding: 70px 180px;
+    padding: 80px 180px;
 
     h2 {
         color: $text-darkgray;
