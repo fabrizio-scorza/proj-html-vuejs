@@ -99,12 +99,12 @@ export default {
 
             img {
                 opacity: 0;
-                transition: opacity 400ms ease-in-out;
+                transition: opacity 800ms ease-in-out;
             }
 
             .overlay {
                 opacity: 1;
-                transition: opacity 400ms ease-in-out;
+                transition: opacity 800ms ease-in-out;
 
             }
         }
