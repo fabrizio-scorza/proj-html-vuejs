@@ -347,7 +347,7 @@ export default {
     }
 
     .credits {
-        color: $text-gray;
+        color: white;
         font-size: 12px;
     }
 }
