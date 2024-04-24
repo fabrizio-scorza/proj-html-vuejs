@@ -10,15 +10,41 @@ export default {
         <div class="row">
             <div class="col-3-gap">
                 <img src="/img/h3-img-1.jpg" alt="">
+                <div class="overlay">
+                    <div class="circle flex">
+                        <font-awesome-icon :icon="['fas', 'eye']" />
+                    </div>
+                </div>
             </div>
             <div class="col-3-gap">
                 <img src="/img/h3-img-2.jpg" alt="">
+                <div class="overlay">
+                    <div class="overlay">
+                        <div class="circle flex">
+                            <font-awesome-icon :icon="['fas', 'eye']" />
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="col-3-gap">
                 <img src="/img/h3-img-3.jpg" alt="">
+                <div class="overlay">
+                    <div class="overlay">
+                        <div class="circle flex">
+                            <font-awesome-icon :icon="['fas', 'eye']" />
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="col-3-gap">
                 <img src="/img/h3-img-4.jpg" alt="">
+                <div class="overlay">
+                    <div class="overlay">
+                        <div class="circle flex">
+                            <font-awesome-icon :icon="['fas', 'eye']" />
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -62,12 +88,52 @@ export default {
 
     .col-3-gap {
         width: calc(3*100%/12 - 6px);
+        position: relative;
+
+        img {
+            display: block;
+        }
+
+        &:hover {
+            background-image: url(/svg/dotted.svg);
+
+            img {
+                opacity: 0;
+                transition: opacity 400ms ease-in-out;
+            }
+
+            .overlay {
+                opacity: 1;
+                transition: opacity 400ms ease-in-out;
+
+            }
+        }
     }
 }
 
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+
+    .circle {
+        width: 50px;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        background-color: $orange;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 20px;
+    }
+}
+
+
 .quotes-section {
     background-color: #F6F7F2;
-    margin-top: 2px;
+    margin-top: 8px;
 }
 
 .quotes-wrapper {
