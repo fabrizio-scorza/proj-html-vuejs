@@ -13,16 +13,100 @@ export default {
         <!-- sezione con le foto del team -->
         <div class="row">
             <div class="col-3">
-                <img src="/img/h1-team-1a-700x700.jpg" alt="">
+                <img src="/img/h1-team-1a-700x700.jpg" alt="" class="at-hover">
+                <div class="overlay flex">
+                    <h3>FRANK BAILEY</h3>
+                    <h4>Kitchen Porter</h4>
+                    <ul class="flex social-icons">
+                        <li>
+                            <a href="#">
+                                <img src="/svg/instagram.svg" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="/svg/twitter.svg" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="/svg/facebook.svg" alt="">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
             <div class="col-3">
-                <img src="/img/h1-team-2a.jpg" alt="">
+                <img src="/img/h1-team-2a.jpg" alt="" class="at-hover">
+                <div class="overlay flex">
+                    <h3>FRANK BAILEY</h3>
+                    <h4>Kitchen Porter</h4>
+                    <ul class="flex social-icons">
+                        <li>
+                            <a href="#">
+                                <img src="/svg/instagram.svg" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="/svg/twitter.svg" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="/svg/facebook.svg" alt="">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
             <div class="col-3">
-                <img src="/img/h1-team-4a.jpg" alt="">
+                <img src="/img/h1-team-4a.jpg" alt="" class="at-hover">
+                <div class="overlay flex">
+                    <h3>FRANK BAILEY</h3>
+                    <h4>Kitchen Porter</h4>
+                    <ul class="flex social-icons">
+                        <li>
+                            <a href="#">
+                                <img src="/svg/instagram.svg" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="/svg/twitter.svg" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="/svg/facebook.svg" alt="">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
             <div class="col-3">
-                <img src="/img/h1-team-3a.jpg" alt="">
+                <img src="/img/h1-team-3a.jpg" alt="" class="at-hover">
+                <div class="overlay flex">
+                    <h3>FRANK BAILEY</h3>
+                    <h4>Kitchen Porter</h4>
+                    <ul class="flex social-icons">
+                        <li>
+                            <a href="#">
+                                <img src="/svg/instagram.svg" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="/svg/twitter.svg" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="/svg/facebook.svg" alt="">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </section>
@@ -50,6 +134,63 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+@use '../style/partials/variables' as *;
+
+.col-3 {
+    position: relative;
+
+    &:hover {
+        background-image: url(/svg/dotted.svg);
+
+        .at-hover {
+            opacity: 0;
+            transition: opacity 800ms ease-in-out;
+        }
+
+        .overlay {
+            opacity: 1;
+            transition: opacity 800ms ease-in-out;
+
+        }
+    }
+}
+
+.overlay {
+    position: absolute;
+    height: 90%;
+    width: 90%;
+    top: 5%;
+    left: 5%;
+    color: white;
+    background-color: $orange;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+
+    h3 {
+        font-size: 24px;
+        line-height: 18px;
+    }
+
+    h4 {
+        font-size: 14px;
+        padding-bottom: 20px;
+    }
+
+}
+
+.social-icons {
+    gap: 8px;
+    justify-content: center;
+
+    img {
+        filter: invert(100%);
+        width: 14px;
+        aspect-ratio: 1;
+    }
+}
+
 .built-your-pizza {
     margin: 8px 0;
     height: 400px;
