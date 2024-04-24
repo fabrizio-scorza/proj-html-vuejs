@@ -73,32 +73,38 @@ export const store = reactive({
             img: '/img/h3-product-img-1a-100x100.png',
             name: 'bismark',
             price: '$30.00',
-            firstPrice: '$35.00'
+            firstPrice: '$35.00',
+            isSoldOut: false,
         },
         {
             img: '/img/h3-product-img-2a-150x150.png',
             name: 'fiori di zucca',
-            price: '$7.00 - $50.00'
+            price: '$7.00 - $50.00',
+            isSoldOut: false,
         },
         {
             img: '/img/h3-product-img-6a-100x100.png',
             name: 'valdostana',
-            price: '$55.00'
+            price: '$55.00',
+            isSoldOut: true,
         },
         {
             img: '/img/h3-product-img-4a-150x150.png',
             name: 'pizza tartufata',
-            price: '$45.00'
+            price: '$45.00',
+            isSoldOut: false,
         },
         {
             img: '/img/h3-product-img-5a-150x150.png',
             name: 'francescana',
-            price: '$25.00'
+            price: '$25.00',
+            isSoldOut: false,
         },
         {
             img: '/img/h3-product-img-3a-150x150.png',
             name: 'campagnola',
-            price: '$50.00 - $95.00'
+            price: '$50.00 - $95.00',
+            isSoldOut: false,
         }
     ]
 })
